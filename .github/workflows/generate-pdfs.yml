@@ -2,6 +2,8 @@ name: Build LaTeX document
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   build_resumes:
     runs-on: ubuntu-latest
@@ -24,6 +26,7 @@ jobs:
     name: "Deploy PDFs"
     needs: build_resumes
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
     permissions:
       pages: write
       id-token: write
