@@ -104,121 +104,15 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumePositionListStart
-
-    \resumeCompanyStart
-      \resumeCompany{\href{https://snaplogic.com}{SnapLogic}}{Remote - Kansas City, MO}
-      \resumeJobTitle{Staff Software Engineer - Snaps}{August 2022 - Present}
-      \resumeJobTitle{Senior Software Engineer - Snaps}{February 2021 - July 2022}
-    \resumeCompanyEnd
-    \resumeItemListStart
-      \resumeItem{Deployment Process Improvement}
-        {
-          Took a process for deploying completed tickets from a month-long task to a week-to-day-long task via JIRA.
-          Reduced time from fix to release from nearly 1 month to an average of 1 week.
-        }
-      \resumeItem{OAuth2 Improvements}
-        {
-          Added support for generic OAuth2 capabilties for grant types including client credentials, password, and authorization code.
-          Hardened the details of the request patterns to align with the full spec of RFC 6749 for web protocols.
-        }
-      \resumeItem{Authenticated Proxy Support}
-        {
-          Spent time researching and implemented standard ways to support authenticated proxies across the codebase which are not impacted by the limitations of the JVM and its arguments.
-          Focused support for http-based services across multiple http client implementations as well as soap-based services over both apache cxf and apache httpcomponents implementations.
-        }
-      \resumeItem{Technology Stack}{Java, Maven, MacOS, JIRA, Git, GitHub, Travis CI}
-    \resumeItemListEnd
-
-    \resumeCompanyStart
-      \resumeCompany{\href{https://cerner.com}{Cerner}}{Kansas City, KS and Kansas City, MO}
-      \resumeJobTitle{Senior Software Engineer}{October 2019 - February 2021}
-    \resumeCompanyEnd
-    \resumeItemListStart
-      \resumeItemNoDescription{CareDecisions Models, Rehabilitation Acute Care Transfer, Mentoring}
-    \resumeItemListEnd
-    \resumeCompanyStart
-      \resumeJobTitle{Associate Senior Software Engineer}{October 2017 - September 2019}
-    \resumeCompanyEnd
-    \resumeItemListStart
-      \resumeItemNoDescription{CareProtocols, Mentoring}
-    \resumeItemListEnd
-    \resumeCompanyStart
-      \resumeJobTitle{Software Engineer}{May 2014 - September 2016}
-    \resumeCompanyEnd
-    \resumeItemListStart
-      \resumeItemNoDescription{Readmissions Outcome Service, Mentoring}
-    \resumeItemListEnd
-    \resumeItemListStart
-      \resumeItem{Technology Stack}{Java, Drools, Hadoop MapReduce, Maven, Oracle SQL, Spring dependency injection, Rest, Chef, Crucible, Bash, JIRA, Git, GitHub, Jenkins}
-    \resumeItemListEnd
-
-    \resumeCompanyStart
-      \resumeCompany{University of Iowa College of Engineering}{Iowa City, IA}
-      \resumeJobTitle{Head Teaching Assistant}{Semesters: Spring 2012, Fall 2012, Spring 2013, Fall 2014}
-      \resumeJobTitle{Teaching Assistant}{Semesters: Spring 2011, Fall 2011}
-    \resumeCompanyEnd
-    \resumeItemListStart
-      \resumeItem{Course - Engineering Problem Solving II}
-        {Introductory programming class for engineering students.}
-    \resumeItemListEnd
-
-    \resumePosition
-      {\href{http://genome.uiowa.edu/clcg/}{University of Iowa Coordinated Lab for Computational Genomics}}{Iowa City, IA}
-      {Graduate Research Assistant}{August 2011 - December 2013}
-    \resumeItemListStart
-      \resumeItem{Outcome Prediction in Head and Neck Cancer Patients using Machine Learning Methods}{Thesis}
-    \resumeItemListEnd
-
-    \resumePosition
-      {\href{https://bioneos.com/}{Bio::Neos}}{Coralville, IA}
-      {Developer}{May 2011 - August 2011}
-    \resumeItemListStart
-      \resumeItem{VCMap}{Helped with bugfixes and UI development and performance.}
-    \resumeItemListEnd
-
+    \input{companies/2021-02-snaplogic_full.tex}
+    \input{companies/2014-05-cerner.tex}
+    \input{companies/2011-08-uicoe.tex}
+    \input{companies/2011-08-clcg.tex}
+    \input{companies/2011-05-bioneos.tex}
   \resumePositionListEnd
 
-
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumePositionListStart
-    \resumePosition
-      {The University of Iowa College of Engineering}{Iowa City, IA}
-      {Master of Science in Biomedical Engineering;  GPA: 3.58}{August 2011 - May 2014}
-    \resumeItemListStart
-      \resumeItem{
-          \href{https://iro.uiowa.edu/esploro/outputs/graduate/Outcome-prediction-in-head-and-neck/9983777204002771?institution=01IOWA_INST}{Outcome Prediction in Head and Neck Cancer Patients using Machine Learning Methods}
-          \footnote{\url{https://iro.uiowa.edu/esploro/outputs/graduate/Outcome-prediction-in-head-and-neck/9983777204002771?institution=01IOWA_INST}}
-        }
-        {Thesis defense December 2013.}
-    \resumeItemListEnd
-    \resumePosition
-      {The University of Iowa College of Engineering}{Iowa City, IA}
-      {Bachelor of Engineering in Biomedical Engineering;  GPA: 3.38}{August 2007 - May 2011}
-  \resumePositionListEnd
-
-
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumePositionListStart
-    \resumeSubItemWithTech{\href{https://github.com/ddellspe/music-bot}{Music Bot}\footnote{https://github.com/ddellspe/music-bot}}
-      {Tool to replace Groovy/Rythm within discord. Runs via docker and is configurable via a config file to work with a given set of discord servers.}
-      {Maven, Java, GitHub Actions, Docker, Spring Boot, Reactor Core, JUnit Testing}
-    \resumeSubItemWithTech{\href{https://anomalyregistration.com}{Anomaly Registration}\footnote{https://anomalyregistration.com} (no longer active)}
-      {Tool used to help people register for events with required approval.}
-      {Python, Google App Engine, Javascript, Git, GitLab, Bash}
-  \resumePositionListEnd
-
-
-%--------PROGRAMMING EXPERIENCE------------
-\section{Programming Experience}
-  \resumePositionListStart
-    \item{
-      \textbf{Languages}{: Java, Python, SQL, JavaScript, Bash}
-    }\vspace{-8pt}
-    \item{
-      \textbf{Technologies and Tools}{: Drools, Google App Engine, Docker, Chef, Git, Jenkins, GitHub}
-    }\vspace{-8pt}
-  \resumePositionListEnd
+\input{education/index.tex}
+\input{projects/index.tex}
+\input{experience/index.tex}
 %-------------------------------------------
 \end{document}
