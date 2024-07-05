@@ -4,13 +4,24 @@
 %------------------------
 \documentclass[letterpaper,11pt]{article}
 
+\usepackage{fontawesome5}
+\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
+\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[bottom]{footmisc}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+
+% Custom font
+\usepackage[default]{lato}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -33,86 +44,34 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
-\renewcommand{\labelitemii}{$\circ$}
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
-%-------------------------
+%-------------------------%
 % Custom commands
-
-% resume item - short title with description
-\newcommand{\resumeItemNoDescription}[1]{
-  \item\small{
-    \textbf{#1\vspace{-5pt}}
-  }
-}
-
-% resume item - short title with description
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-5pt}}
-  }
-}
-
-% resume item - short title with description, then tech stack components
-\newcommand{\resumeItemWithTech}[3]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}\\
-    \textbf{Technology Stack}{: #3 \vspace{-2pt}}
-  }
-}
-
-% resume positions
-\newcommand{\resumePositionListStart}{\begin{itemize}[leftmargin=*,label={}]}
-\newcommand{\resumePositionListEnd}{\end{itemize}}
-% resume position - company, location, job title, and representative
-\newcommand{\resumePosition}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & {\small#4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-% For use when you have a company with multiple job titles over the length of a resume
-\newcommand{\resumeCompanyStart}{\vspace{-1pt}\item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}}
-\newcommand{\resumeCompanyEnd}{\end{tabular*}\vspace{-8pt}}
-% resume company for multiple job titles per company
-\newcommand{\resumeCompany}[2]{
-  \textbf{#1} & #2 \\
-}
-
-% resume job title for separating multiple job titles within a company
-\newcommand{\resumeJobTitle}[2]{
-  \textit{\small#1} & {\small#2} \\
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-\newcommand{\resumeSubItemWithTech}[3]{\resumeItemWithTech{#1}{#2}{#3}\vspace{-4pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
 \begin{document}
+\include{custom-commands}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large David Dellsperger} & Email : \href{mailto:david.dellsperger@gmail.com}{david.dellsperger@gmail.com}\\
-  & Mobile : 816-853-1627 \\
-\end{tabular*}\vspace{-15pt}
+%-------------------------------------------%
+%%%%%%  RESUME STARTS HERE  %%%%%
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumePositionListStart
-    \input{companies/2021-02-snaplogic_full.tex}
-    \input{companies/2014-05-cerner.tex}
-    \input{companies/2011-08-uicoe.tex}
-    \input{companies/2011-08-clcg.tex}
-    \input{companies/2011-05-bioneos.tex}
-  \resumePositionListEnd
+%----------HEADING----------%
+\input{src/heading}
 
-\input{education/index.tex}
-\input{projects/index.tex}
-\input{experience/index.tex}
-%-------------------------------------------
+%-----------EXPERIENCE-----------%
+\input{src/experience}
+
+%-----------PROJECTS-----------%
+\input{src/projects}
+
+%-----------SKILLS-----------%
+\input{src/skills.tex}
+
+%-----------EDUCATION-----------%
+\input{src/education.tex}
+
+%-------------------------------------------%
 \end{document}
